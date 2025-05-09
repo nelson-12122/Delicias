@@ -1,0 +1,432 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+
+.hero h1, .hero p {
+    position: center;
+    z-index: 1;
+}
+
+
+.menu {
+    background-color: #f172e296;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.menu a {
+    color: rgb(0, 0, 0);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.contenedor-cuadros {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    background-color: #ffffff00;
+}
+
+.cuadro {
+    width: 30%;
+    padding: 20px;
+    background-color: rgba(253, 138, 240, 0.495);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(25, 132, 213, 0.1);
+    margin-bottom: 20px;
+}
+
+
+.menu {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.items-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #FFF8E1;
+    border-radius: 8px;
+}
+
+
+footer {
+    background-color: #d983cf;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+@media (max-width: 768px) {
+    .cuadro {
+        width: 90%;
+    }
+}
+
+/* Estilos para la sección del menú */
+.menu {
+    padding: 60px 20px;
+    background-color: #FFF9F0;
+}
+
+.items-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+}
+
+.item-contenido {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.item-decoracion {
+    height: 8px;
+    background: linear-gradient(90deg, #d73bd0 0%, #f32f2f 50%, #ff53ff 100%);
+}
+
+.descripcion {
+    color: #666;
+    margin: 15px 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.precio {
+    font-weight: bold;
+    color: #a811e4;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.btn-comprar {
+    background-color: #2b43dd;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-comprar:hover {
+    background-color: #39b823;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .items-menu {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos del carrito */
+.carrito-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-container {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cerrar-carrito {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.carrito-items {
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-titulo {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-precio {
+    color: #E63946;
+}
+
+.btn-eliminar {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.carrito-total {
+    text-align: right;
+    font-size: 1.2em;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+}
+
+.btn-pagar {
+    background: #2e38cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-pagar:hover {
+    background: #27ae60;
+}
+
+/* Botón flotante del carrito */
+.btn-carrito-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #8dd8b797;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7em;
+}
+
+/* Cabecera principal */
+.hero-header {
+    position: relative;
+    height: 85vh;
+    background-image: url('debitos.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 10px;
+}
+
+.nombre-empresa h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0);
+}
+
+.nombre-empresa p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(196, 10, 193, 0);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 24, 24, 0);
+    z-index: 1;
+}
+
+.nombre-empresa {
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo interactivo */
+.logo-container {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    z-index: 10;
+}
+
+.logo-interactivo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.logo-interactivo:hover {
+    transform: scale(1.1);
+}
+
+.logo-interactivo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estado ampliado del logo */
+.logo-interactivo.activo {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    border: 5px solid rgba(255, 255, 255, 0);
+}
+
+.cerrar-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(230, 224, 224, 0);
+    color: white;
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.logo-interactivo.activo .cerrar-logo {
+    opacity: 1;
+}
+
+/* Overlay para el logo ampliado */
+.overlay-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 0, 12, 0);
+    z-index: 1000;
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nombre-empresa h1 {
+        font-size: 2.5rem;
+    }
+    
+    .logo-interactivo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo-interactivo.activo {
+        width: 250px;
+        height: 250px;
+    }
+}
+.bi-instagram {
+    font-size: 24px;
+    color: #E1306C;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  

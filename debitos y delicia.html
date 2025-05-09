@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Débitos y Delicias - Disfruta sin culpa endulza,tu vida</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>  
+    <nav class="menu">
+        <a style="font-size: 30px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" href="#Inicio">Inicio</a>
+        <a style="font-size: 30px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"href="#Menu">Menu</a>
+        <a style="font-size: 30px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"href="#Contacto">Contacto</a>
+    </nav>  
+    <!-- Carrito de compras -->
+<div class="carrito-overlay" id="carritoOverlay">
+    <div class="carrito-container">
+        <div class="carrito-header">
+            <h2>Tu Carrito</h2>
+            <button class="cerrar-carrito" id="cerrarCarrito">✖</button>
+        </div>
+        <div class="carrito-items" id="carritoItems">
+            <!-- Los productos se añadirán aquí dinámicamente -->
+        </div>
+        <div class="carrito-total">
+            <p>Total: <span id="totalCarrito">RD$0</span></p>
+            <button class="btn-pagar">Pagar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Botón flotante del carrito -->
+<button class="btn-carrito-flotante" id="btnCarrito">
+    🛒 <span class="contador-carrito" id="contadorCarrito">0</span>
+</button>
+
+    </header>
+    <!-- Cabecera con imagen de fondo y nombre -->
+<header class="hero-header">
+    <div class="nombre-empresa">
+        <h1>Débitos y Delicias</h1>
+        <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Disfruta sin culpa endulza,tu vida</p>
+    </div>
+
+    <!-- Logo interactivo -->
+    <div class="logo-container">
+        <div class="logo-interactivo" id="logoInteractivo">
+            <img src="logo de la empresa.jpg" alt="Logo Débito y Delicias">
+            <span class="cerrar-logo" id="cerrarLogo">x</span>
+        </div>
+    </div>
+    
+    <!-- Overlay para oscurecer fondo -->
+    <div class="overlay"></div>
+</header>
+
+
+    <section class="contenedor-cuadros">
+        <div class="cuadro">
+            <h2>Misión</h2>
+            <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Ofrecer experiencias dulces y saludables mediante la elaboración artesanal de productos de repostería bajos en azúcares,combinando sabor calidad e innovación para cuidar el bienestar de nuestros clientes sin renunciar al placer de lo dulce.</p>
+        </div>
+
+        <div class="cuadro">
+            <h2>Visión</h2>
+            <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Ser reconocidos como líderes en la elaboración de postres saludables innovando constantemente en nuestras recetas y fomentando una comunidad consciente sobre la alimentación y la salud.
+        </p>
+        </div>
+
+        <div style="font-size: 25;" class="cuadro">
+            <h2>Valores</h2>
+            <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Calidad, Transparencia , Innovación, Accesibilidad, Compromiso con el cliente.</p>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Menú</h2>
+    <div class="items-menu">
+        <!-- Item 1 -->
+        <div class="item">
+            <div class="item-contenido">
+                <h3>Brownie de Remolacha</h3>
+                <p class="descripcion">Húmedo y esponjoso, elaborado con harina de almendra, cacao amargo y remolacha rallada para un dulzor natural. Las nueces añaden un crujiente que contrasta con su interior jugoso, perfecto para los amantes del chocolate.</p>
+                <p class="precio">RD$ 200</p>
+                <button class="btn-comprar">Añadir al carrito</button>
+            </div>
+            <div class="item-decoracion"></div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="item">
+            <div class="item-contenido">
+                <h3>Natillas de chocolate veganas</h3>
+                <p class="descripcion">Elaboradas con tofu sedoso, cacao y edulcorante, son una versión ligera y proteica de las natillas tradicionales. Su textura suave y su sabor intenso las hacen irresistibles, incluso sin lácteos.</p>
+                <p class="precio">RD$ 350</p>
+                <button class="btn-comprar">Añadir al carrito</button>
+            </div>
+            <div class="item-decoracion"></div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="item">
+            <div class="item-contenido">
+                <h3>Cheesecake de Frutos Rojos</h3>
+                <p class="descripcion">Base de nueces y crema de anacardos</p>
+                <p class="precio">RD$ 350</p>
+                <button class="btn-comprar">Añadir al carrito</button>
+            </div>
+            <div class="item-decoracion"></div>
+        </div>
+        <div class="items-menu">
+            <!-- Item 1 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Tarta de Chocolate sin Azúcar</h3>
+                    <p class="descripcion">Hecha con cacao puro y endulzante de monk fruit</p>
+                    <p class="precio">RD$ 300</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Galletas de Avena Diabéticas</h3>
+                    <p class="descripcion">Con harina de almendra y chips de chocolate sin azúcar</p>
+                    <p class="precio">RD$ 300</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Sorbete de Mango y Plátano</h3>
+                    <p class="descripcion">Refrescante y cremoso, hecho solo con fruta congelada batida. Sin lácteos ni azúcar añadido, es una alternativa tropical al helado tradicional, llena de vitamina C y potasio.</p>
+                    <p class="precio">RD$ 300</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+        </div>
+        <div class="items-menu">
+            <!-- Item 1 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Copas de Queso Fresco y Frutos Rojos</h3>
+                    <p class="descripcion">Queso fresco batido con vainilla, servido en capas con salsa de frambuesas natural y almendras fileteadas. Un postre ligero que combina proteínas y antioxidantes en cada cucharada.</p>
+                    <p class="precio">RD$ 350</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Capirotada Saludable</h3>
+                    <p class="descripcion">Versión mejorada del clásico mexicano, con pan integral, frutos secos, coco rallado y un toque de canela. Endulzada con monk fruit, es un postre reconfortante lleno de fibra y grasas saludables.</p>
+                    <p class="precio">RD$ 350</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Crema de Chocolate, Aguacate y Plátano</h3>
+                    <p class="descripcion">Base de nueces y crema de anacardos</p>
+                    <p class="precio">RD$ 300</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+        </div>
+        <div class="items-menu">
+            <!-- Item 1 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Helado de Plátano y Mantequilla de Cacahuete</h3>
+                    <p class="descripcion">Elaborado solo con plátano congelado y mantequilla de cacahuete sin azúcar. Su textura cremosa y su sabor a caramelo natural lo convierten en un postre rápido y saciante, perfecto para satisfacer antojos dulces sin glucosa añadida.</p>
+                    <p class="precio">RD$ 350</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Trufas de Aguacate y Cacao</h3>
+                    <p class="descripcion">Bolitas energéticas hechas con aguacate, cacao en polvo, coco rallado y nueces. Sin azúcar añadido, son ideales como snack rápido o postre, aportando grasas monoinsaturadas y magnesio.</p>
+                    <p class="precio">RD$ 550</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Pastelitos de Queso sin Azúcar</h3>
+                    <p class="descripcion">Miniaturas esponjosas de queso crema y yogur griego, endulzados con eritritol. Coronados con arándanos frescos, son ideales para porciones controladas y ricas en proteínas.</p>
+                    <p class="precio">RD$ 400</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+        </div>
+        <div class="items-menu">
+            <!-- Item 1 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Flan de Coco Bajo en Azúcar</h3>
+                    <p class="descripcion">Un clásico reinventado con azúcar de coco y crema de coco sin grasa. Su caramelo ámbar y textura sedosa lo hacen ideal para quienes buscan un postre tradicional mexicano con un índice glucémico controlado.</p>
+                    <p class="precio">RD$ 500</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Palomitas de Cacao con Specias</h3>
+                    <p class="descripcion">Crujientes granos de maíz bañados en cacao puro, canela y cayena, endulzadas con jarabe de maple. Una combinación de sabores mexicanos que equilibra lo dulce con un toque picante, perfecto para antojos saludables.</p>
+                    <p class="precio">RD$ 400</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Pudding de Chía y Mango</h3>
+                    <p class="descripcion">Semillas de chía hidratadas en leche de almendra, mezcladas con mango fresco y yogur griego. Rico en fibra y omega-3, es un postre que regula la absorción de carbohidratos y aporta un toque tropical</p>
+                    <p class="precio">RD$ 350</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+        </div>
+        <div class="items-menu">
+            <!-- Item 1 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Galletas de Avena y Plátano</h3>
+                    <p class="descripcion">Crujientes por fuera y tiernas por dentro, elaboradas con plátano maduro, copos de avena y canela. Sin azúcar añadido, son perfectas para un snack energético o un desayuno equilibrado, con un toque naturalmente dulce</p>
+                    <p class="precio">RD$ 100</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Dulce de Tapioca con Leche de Coco</h3>
+                    <p class="descripcion">Bolitas de tapioca cocidas en leche de almendra y coco, aromatizadas con vainilla y canela. Sin azúcar añadido, ofrece una textura única y un sabor tropical ligero.</p>
+                    <p class="precio">RD$ 600</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Pastel de Zanahoria</h3>
+                    <p class="descripcion">Húmedo y especiado, con trozos de zanahoria fresca que aportan un dulzor natural. Mezclado con nueces tostadas y un toque de canela, se corona con un glaseado de queso crema que equilibra cada bocado. Un clásico reinventado para conquistar hasta a los más escépticos.</p>
+                    <p class="precio">RD$ 600</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+        </div>
+        <div class="items-menu">
+            <!-- Item 1 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Alegrías de amaranto</h3>
+                    <p class="descripcion">Barras tradicionales mexicanas hechas con amaranto inflado y miel natural (o monk fruit). Ricas en fibra y proteínas, son un snack energético que honra la dulcería ancestral.</p>
+                    <p class="precio">RD$ 500</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Mousse de Mango, Avena y Coco</h3>
+                    <p class="descripcion">Una mezcla aterciopelada donde el mango tropical brilla junto a la avena tostada y el coco rallado. La ligereza del mousse contrasta con pequeños crujientes de granola casera, mientras el aroma a fruta fresca y notas exóticas transportan a una playa al atardecer.</p>
+                    <p class="precio">RD$ 500</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Fresas Cítricas con Crema Batida</h3>
+                    <p class="descripcion">Fresas maceradas en jugo de limón, acompañadas de crema batida baja en grasa y chocolate oscuro rallado. Un postre navideño refrescante con solo 27 calorías por porción.</p>
+                    <p class="precio">RD$ 500</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+        </div>
+        <div class="items-menu">
+            <!-- Item 1 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Yogur Griego con Frutas y Nueces</h3>
+                    <p class="descripcion">Cremoso yogur natural mezclado con fresas, arándanos y almendras tostadas. Una explosión de proteínas, fibra y vitaminas que equilibra lo dulce de la fruta con el crujiente de las nueces, ideal para meriendas ligeras.</p>
+                    <p class="precio">RD$ 350</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Brownie  de Banana </h3>
+                    <p class="descripcion">Un brownie húmedo y esponjoso, enriquecido con trozos de banana caramelizada que aportan un toque naturalmente dulce y una jugosidad irresistible. El chocolate intenso se funde con la fruta, creando un contraste entre lo terroso y lo tropical. ¡Un bocado que despierta nostalgia y curiosidad!</p>
+                    <p class="precio">RD$ 500</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="item">
+                <div class="item-contenido">
+                    <h3>Cheesecake</h3>
+                    <p class="descripcion">Un deleite cremoso con una base crujiente de galleta, coronado con un suave queso crema batido hasta alcanzar la textura perfecta. Su sabor equilibrado entre lo dulce y lo lácteo se derrite en el paladar, ideal para los amantes de los postres elegantes y reconfortantes.</p>
+                    <p class="precio">RD$ 550</p>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+                <div class="item-decoracion"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>Contacto: info@debitoydelicias.com | Tel: 829 990 5214 </p>
+        <p>© 2025 Débitos y Delicias - Disfruta sin culpa endulza,tu vida</p>
+        <p>Síguenos en Instagram  
+            <a href="https://www.instagram.com/debitosydelicias?igsh=cXZ2OGtia2RpcWZ4" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+                <a href="https://www.instagram.com/debitosydelicias?igsh=cXZ2OGtia2RpcWZ4" target="_blank">
+                  <img src="logo de la empresa.jpg" alt="Instagram" style="width:24px; vertical-align:middle; margin-left:5px;">
+                </a>
+              </p>
+              
+          
+    </footer>
+</body>
+</html>
+<script>// Función para el botón de compra
+    document.querySelectorAll('.btn-comprar').forEach(boton => {
+        boton.addEventListener('click', function() {
+            const item = this.closest('.item');
+            const nombre = item.querySelector('h3').textContent;
+            const precio = item.querySelector('.precio').textContent;
+            
+            // Aquí puedes agregar la lógica del carrito
+            alert(`Añadido al carrito: ${nombre} - ${precio}`);
+            
+            // Efecto visual
+            this.textContent = '✓ Añadido!';
+            setTimeout(() => {
+                this.textContent = 'Añadir al carrito';
+            }, 2000);
+        });
+    });
+    </script>
+    <script>// Variables globales
+        let carrito = [];
+        const carritoItems = document.getElementById('carritoItems');
+        const totalCarrito = document.getElementById('totalCarrito');
+        const contadorCarrito = document.getElementById('contadorCarrito');
+        const carritoOverlay = document.getElementById('carritoOverlay');
+        const btnCarrito = document.getElementById('btnCarrito');
+        const cerrarCarrito = document.getElementById('cerrarCarrito');
+         
+        // Función para actualizar el carrito
+        function actualizarCarrito() {
+            // Limpiar carrito
+            carritoItems.innerHTML = '';
+            
+            // Actualizar items
+            carrito.forEach((item, index) => {
+                const divItem = document.createElement('div');
+                divItem.className = 'item-carrito';
+                divItem.innerHTML = `
+                    <div class="item-info">
+                        <p class="item-titulo">${item.nombre}</p>
+                        <p class="item-precio">${item.precio}</p>
+                    </div>
+                    <button class="btn-eliminar" data-index="${index}">Eliminar</button>
+                `;
+                carritoItems.appendChild(divItem);
+            });
+            
+            // Actualizar total
+            const total = carrito.reduce((sum, item) => sum + parseFloat(item.precio.replace('RD$', '')), 0);
+            totalCarrito.textContent = `$${total.toFixed(2)}`;
+            
+            // Actualizar contador
+            contadorCarrito.textContent = carrito.length;
+        }
+        
+        // Función para agregar al carrito (modificar la función existente)
+        document.querySelectorAll('.btn-comprar').forEach(boton => {
+            boton.addEventListener('click', function() {
+                const item = this.closest('.item');
+                const nombre = item.querySelector('h3').textContent;
+                const precio = item.querySelector('.precio').textContent;
+                
+                // Agregar al carrito
+                carrito.push({ nombre, precio });
+                actualizarCarrito();
+                
+                // Efecto visual
+                this.textContent = '✓ Añadido!';
+                setTimeout(() => {
+                    this.textContent = 'Añadir al carrito';
+                }, 20000);
+            });
+        });
+        
+        // Eliminar productos del carrito
+        document.addEventListener('click', function(e) {
+            if(e.target.classList.contains('btn-eliminar')) {
+                const index = e.target.getAttribute('data-index');
+                carrito.splice(index, 1);
+                actualizarCarrito();
+            }
+        });
+        
+        // Mostrar/ocultar carrito
+        btnCarrito.addEventListener('click', () => {
+            carritoOverlay.style.display = 'flex';
+        });
+        
+        cerrarCarrito.addEventListener('click', () => {
+            carritoOverlay.style.display = 'none';
+        });
+        
+        // Cerrar al hacer click fuera del carrito
+        carritoOverlay.addEventListener('click', (e) => {
+            if(e.target === carritoOverlay) {
+                carritoOverlay.style.display = 'none';
+            }
+        });
+        </script>
+        <script>
+// Logo interactivo
+const logo = document.getElementById('logoInteractivo');
+const cerrarLogo = document.getElementById('cerrarLogo');
+const overlayLogo = document.createElement('div');
+overlayLogo.classList.add('overlay-logo');
+document.body.appendChild(overlayLogo);
+
+// Abrir logo
+logo.addEventListener('click', function() {
+    if(!this.classList.contains('activo')) {
+        this.classList.add('activo');
+        overlayLogo.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+});
+
+// Cerrar logo
+cerrarLogo.addEventListener('click', function(e) {
+    e.stopPropagation();
+    logo.classList.remove('activo');
+    overlayLogo.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+// Cerrar al hacer click fuera
+overlayLogo.addEventListener('click', function() {
+    logo.classList.remove('activo');
+    this.style.display = 'none';
+    document.body.style.overflow = 'auto';});

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Débito y Delicias - Postres Saludables</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <h1>Débito y Delicias</h1>
+        <p>Postres que cuidan tu salud</p>
+    </header>
+
+    <section class="contenedor-cuadros">
+        <div class="cuadro">
+            <h2>Misión</h2>
+            <p>Proporcionar a las personas con diabetes o que deseen cuidar más de su salud, opciones deliciosas, saludables y accesibles que les permitan disfrutar de momentos especiales sin comprometer su bienestar.</p>
+        </div>
+
+        <div class="cuadro">
+            <h2>Nuestros Postres</h2>
+            <p>Elaborados con endulzantes naturales, harinas integrales y superalimentos. Sin azúcares refinados ni conservantes artificiales.</p>
+        </div>
+
+        <div class="cuadro">
+            <h2>Compromiso</h2>
+            <p>Cada receta es creada por nutricionistas y chefs especializados en alimentación saludable.</p>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Menú de Postres disponibles</h2>
+        <div class="items-menu">
+            <div class="item">
+                <h3>Tarta de Chocolate sin Azúcar</h3>
+                <p>Hecha con cacao puro y endulzante de monk fruit</p>
+            </div>
+            <div class="item">
+                <h3>Galletas de Avena Diabéticas</h3>
+                <p>Con harina de almendra y chips de chocolate sin azúcar</p>
+            </div>
+            <div class="item">
+                <h3>Cheesecake de Frutos Rojos</h3>
+                <p>Base de nueces y crema de anacardos</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>Contacto: info@debitoydelicias.com | Tel: 829-990-5214</p>
+        <p>© 2025 Débito y Delicias - Disfruta sin culpa endulza,tu vida</p>
+    </footer>
+</body>
+</html>
